@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why DSA Matters - Data Structures & Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <canvas id="particleCanvas"></canvas>
+        <div class="grid-overlay"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">DSA Insights</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#importance" class="nav-link">Importance</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#examples" class="nav-link">Examples</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Why Data Structures & Algorithms Matter</h1>
+            <p class="hero-subtitle">Unlock the power of efficient problem-solving and build better software</p>
+            <button class="cta-button" onclick="window.open('https://www.geeksforgeeks.org', '_blank')"><span>Explore Now</span></button>
+        </div>
+        <div class="hero-animation">
+            <div class="code-block"></div>
+        </div>
+    </section>
+
+    <!-- Importance Section -->
+    <section id="importance" class="section">
+        <div class="container">
+            <h2 class="section-title">The Foundation of Computer Science</h2>
+            <div class="cards-grid">
+                <div class="card" data-aos="fade-up">
+                    <div class="card-icon">⚡</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Choosing the right data structure can make your code run 100x faster. DSA helps you write efficient code that scales.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-delay="100">
+                    <div class="card-icon">🧠</div>
+                    <h3>Problem-Solving Skills</h3>
+                    <p>DSA trains your mind to break down complex problems into manageable pieces and find optimal solutions.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-delay="200">
+                    <div class="card-icon">💼</div>
+                    <h3>Career Advancement</h3>
+                    <p>Top tech companies prioritize DSA knowledge. It's essential for technical interviews and career growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Key Benefits of Mastering DSA</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <div class="benefit-content">
+                        <h3>Efficient Memory Usage</h3>
+                        <p>Learn to optimize memory consumption. Understanding data structures helps you choose the right tool for the job, reducing memory footprint and improving application performance.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <div class="benefit-content">
+                        <h3>Scalability</h3>
+                        <p>Build applications that can handle millions of users. DSA knowledge enables you to design systems that grow efficiently without performance degradation.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <div class="benefit-content">
+                        <h3>Code Quality</h3>
+                        <p>Write cleaner, more maintainable code. Understanding algorithms helps you implement solutions that are both correct and elegant.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <div class="benefit-content">
+                        <h3>System Design</h3>
+                        <p>Design robust systems architecture. DSA principles are fundamental to building distributed systems, databases, and complex software architectures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="section">
+        <div class="container">
+            <h2 class="section-title">Real-World Applications</h2>
+            <div class="examples-container">
+                <div class="example-tabs">
+                    <button class="tab-button active" data-tab="search">Search Engines</button>
+                    <button class="tab-button" data-tab="social">Social Media</button>
+                    <button class="tab-button" data-tab="gaming">Gaming</button>
+                    <button class="tab-button" data-tab="navigation">Navigation</button>
+                </div>
+                <div class="tab-content active" id="search">
+                    <h3>Search Engines</h3>
+                    <p>Google uses sophisticated algorithms like PageRank (graph algorithms) and indexing structures (hash tables, B-trees) to return relevant results in milliseconds from billions of web pages.</p>
+                    <div class="example-visual">
+                        <div class="visual-item">Indexing</div>
+                        <div class="visual-item">Ranking</div>
+                        <div class="visual-item">Retrieval</div>
+                    </div>
+                </div>
+                <div class="tab-content" id="social">
+                    <h3>Social Media</h3>
+                    <p>Facebook uses graph data structures to represent social networks, enabling features like friend suggestions, news feed algorithms, and finding mutual connections efficiently.</p>
+                    <div class="example-visual">
+                        <div class="visual-item">Graph Networks</div>
+                        <div class="visual-item">Feed Algorithms</div>
+                        <div class="visual-item">Recommendations</div>
+                    </div>
+                </div>
+                <div class="tab-content" id="gaming">
+                    <h3>Gaming</h3>
+                    <p>Game engines use pathfinding algorithms (A*), spatial data structures (quadtrees, octrees), and collision detection algorithms to create immersive gaming experiences.</p>
+                    <div class="example-visual">
+                        <div class="visual-item">Pathfinding</div>
+                        <div class="visual-item">Collision Detection</div>
+                        <div class="visual-item">Spatial Indexing</div>
+                    </div>
+                </div>
+                <div class="tab-content" id="navigation">
+                    <h3>Navigation Systems</h3>
+                    <p>GPS applications use shortest path algorithms (Dijkstra's, A*) and graph data structures to calculate optimal routes between locations in real-time.</p>
+                    <div class="example-visual">
+                        <div class="visual-item">Route Planning</div>
+                        <div class="visual-item">Traffic Optimization</div>
+                        <div class="visual-item">Real-time Updates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section id="quiz" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Test Your DSA Knowledge</h2>
+            <div class="quiz-container">
+                <div class="quiz-question" id="quizQuestion">
+                    <h3 id="questionText">Which data structure is best for implementing a LIFO (Last In First Out) system?</h3>
+                    <div class="quiz-options" id="quizOptions">
+                        <button class="option-btn" data-correct="true">Stack</button>
+                        <button class="option-btn" data-correct="false">Queue</button>
+                        <button class="option-btn" data-correct="false">Array</button>
+                        <button class="option-btn" data-correct="false">Linked List</button>
+                    </div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                    <button class="next-btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+                </div>
+                <div class="quiz-score">
+                    <p>Score: <span id="score">0</span>/<span id="total">0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DSA Insights. Understanding Data Structures and Algorithms is the key to becoming a better developer.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
