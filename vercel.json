@@ -8,13 +8,6 @@
   ],
   "routes": [
     {
-      "src": "/(.*\\.(js|css|html|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "headers": {
-        "cache-control": "s-maxage=31536000, immutable"
-      },
-      "dest": "/public/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/api/index.js"
     }
