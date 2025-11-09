@@ -21,9 +21,11 @@ module.exports = (req, res) => {
     }
     
     if (htmlContent) {
-        // Fix paths in HTML to work with Vercel
-        htmlContent = htmlContent.replace(/href="styles\.css"/g, 'href="/styles.css"');
-        htmlContent = htmlContent.replace(/src="script\.js"/g, 'src="/script.js"');
+        // Fix paths in HTML to work with Vercel (absolute paths)
+        htmlContent = htmlContent.replace(/href=["']styles\.css["']/g, 'href="/styles.css"');
+        htmlContent = htmlContent.replace(/src=["']script\.js["']/g, 'src="/script.js"');
+        htmlContent = htmlContent.replace(/href=["']\.\/styles\.css["']/g, 'href="/styles.css"');
+        htmlContent = htmlContent.replace(/src=["']\.\/script\.js["']/g, 'src="/script.js"');
         
         res.setHeader('Content-Type', 'text/html');
         res.status(200).send(htmlContent);
