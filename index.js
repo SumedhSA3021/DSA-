@@ -8,7 +8,28 @@ const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 app.use(express.static(publicPath));
 
-// Route for home page
+// Serve static files with correct MIME types
+app.get('*.js', (req, res, next) => {
+    const filePath = path.join(publicPath, req.path);
+    if (fs.existsSync(filePath)) {
+        res.type('application/javascript');
+        res.sendFile(filePath);
+    } else {
+        next();
+    }
+});
+
+app.get('*.css', (req, res, next) => {
+    const filePath = path.join(publicPath, req.path);
+    if (fs.existsSync(filePath)) {
+        res.type('text/css');
+        res.sendFile(filePath);
+    } else {
+        next();
+    }
+});
+
+// Route for all other requests (including home page)
 app.get('*', (req, res) => {
     // Try multiple possible paths for Vercel
     const possiblePaths = [
@@ -45,4 +66,3 @@ app.get('*', (req, res) => {
 });
 
 module.exports = app;
-
